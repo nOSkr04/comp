@@ -13,7 +13,7 @@ const START_Y_POSITION = -50;
 const SNOWFLAKE_TYPES = ["❄", "❅", "❆"];
 const scene = Dimensions.get("window");
 
-export default function Snowflake() {
+function Snowflake() {
   const [config, setConfig] = useState(() => getConfig({ initialDelay: true }));
   const animatedY = useRef(new Animated.Value(START_Y_POSITION)).current;
   const animatedRotation = useRef(new Animated.Value(0)).current;
@@ -30,7 +30,7 @@ export default function Snowflake() {
         duration: config.rotationDuration,
         useNativeDriver: true,
         easing: Easing.linear,
-      }),
+      })
     ).start();
 
     Animated.loop(
@@ -47,7 +47,7 @@ export default function Snowflake() {
           easing: Easing.linear,
           useNativeDriver: true,
         }),
-      ]),
+      ])
     ).start();
 
     Animated.sequence([
@@ -96,7 +96,8 @@ export default function Snowflake() {
           fontSize: config.size,
           opacity: config.opacity,
         },
-      ]}>
+      ]}
+    >
       {config.type}
     </Animated.Text>
   );
@@ -137,3 +138,5 @@ function getConfig({ initialDelay = false } = {}) {
 function randomInt(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+export { Snowflake };
