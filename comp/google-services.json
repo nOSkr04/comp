@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "506978404121",
+    "project_id": "comp-af4f7",
+    "storage_bucket": "comp-af4f7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:506978404121:android:2ce99a53719ec2d6fae788",
+        "android_client_info": {
+          "package_name": "com.tselmen.comp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCn73SzHhnGnPC49YoaiMFO-PWNt0WfEHQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
