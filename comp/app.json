@@ -1,0 +1,51 @@
+{
+  "expo": {
+    "name": "comp",
+    "slug": "comp",
+    "version": "1.0.3",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.tselmen.comp",
+      "versionCode": 2
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-updates",
+        {
+          "username": "tselmen"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "3eb268d4-dee0-42e3-b6ec-6b4d166b2dd4"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/3eb268d4-dee0-42e3-b6ec-6b4d166b2dd4"
+    }
+  }
+}
