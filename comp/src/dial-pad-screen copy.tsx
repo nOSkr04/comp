@@ -7,12 +7,12 @@ import {
   View,
 } from "react-native";
 import React, { memo, useCallback, useState } from "react";
+import { DialPad } from "./dial-pad";
 import Animated, {
   useAnimatedStyle,
   withSpring,
   withTiming,
 } from "react-native-reanimated";
-import { DialPad } from "./src/dial-pad";
 
 const width = Dimensions.get("window").width;
 
@@ -21,7 +21,7 @@ const pinContainerSize = width / 2;
 const pinMaxSize = pinContainerSize / pinLength;
 const pinSpacing = 10;
 const pinSize = pinMaxSize - pinSpacing * 2;
-const App = memo(() => {
+const DialPadScreen = memo(() => {
   const [code, setCode] = useState<number[]>([]);
 
   return (
@@ -61,7 +61,9 @@ const App = memo(() => {
   );
 });
 
-export default App;
+DialPadScreen.displayName = "DialPadScreen";
+
+export { DialPadScreen };
 
 const styles = StyleSheet.create({
   container: {
