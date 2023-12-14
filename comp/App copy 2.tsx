@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 import React, { memo, useCallback, useState } from "react";
-import { DialPad } from "./dial-pad";
+import { DialPad } from "./src/dial-pad";
 import Animated, {
   useAnimatedStyle,
   withSpring,
@@ -22,7 +22,7 @@ const pinContainerSize = width / 2;
 const pinMaxSize = pinContainerSize / pinLength;
 const pinSpacing = 10;
 const pinSize = pinMaxSize - pinSpacing * 2;
-const DialPadScreen = memo(() => {
+const App = () => {
   const [code, setCode] = useState<number[]>([]);
 
   return (
@@ -53,9 +53,9 @@ const DialPadScreen = memo(() => {
           });
           return (
             <Animated.Image
-              source={require("./gift.png")}
-              style={[aniamtedStyle]}
               key={`pin-${i}`}
+              style={[aniamtedStyle]}
+              source={require("./src/gift.png")}
             />
           );
         })}
@@ -63,11 +63,9 @@ const DialPadScreen = memo(() => {
       <DialPad setCode={setCode} code={code} />
     </View>
   );
-});
+};
 
-DialPadScreen.displayName = "DialPadScreen";
-
-export { DialPadScreen };
+export default App;
 
 const styles = StyleSheet.create({
   container: {
@@ -80,7 +78,6 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     gap: pinSpacing * 2,
     marginBottom: 40,
-    backgroundColor: "green",
     height: pinSize * 2,
     alignItems: "flex-end",
   },
